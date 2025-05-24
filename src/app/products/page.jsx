@@ -67,9 +67,7 @@ export default async function ProductsPage({ searchParams }) {
               const isDiscounted = product.OriginalPrice && product.OriginalPrice > product.Price
 
               // Get the first image URL if available
-              const imageUrl = product.Images && product.Images.length > 0 
-                ? `${process.env.NEXT_PUBLIC_STRAPI_API_URL}${product.Images[0].url}`
-                : `/placeholder.svg?height=400&width=400&text=${product.Name}`;
+              const imageUrl = product.Images[0].url
 
               return (
                 <Link key={product.id} href={`/products/${product.Slug}`}>

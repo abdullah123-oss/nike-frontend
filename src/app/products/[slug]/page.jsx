@@ -24,7 +24,7 @@ export default async function ProductDetailPage({ params }) {
 
     // Get the main image URL if available
     const mainImageUrl = Images && Images.length > 0 
-      ? `${process.env.NEXT_PUBLIC_STRAPI_API_URL}${Images[0].url}`
+      ? Images[0].url
       : `/placeholder.svg?height=600&width=600&text=${Name}`;
 
     return (
@@ -66,7 +66,7 @@ export default async function ProductDetailPage({ params }) {
                 Images.map((image, i) => (
                   <div key={i} className="aspect-square overflow-hidden rounded-md bg-gray-100">
                     <Image
-                      src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${image.url}`}
+                      src={image.url}
                       alt={`${Name} thumbnail ${i + 1}`}
                       width={150}
                       height={150}
