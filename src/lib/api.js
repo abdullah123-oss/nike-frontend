@@ -1,7 +1,7 @@
 // lib/api.js
 // API service to fetch data from Strapi
 
-export const STRAPI_API_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1337"
+export const STRAPI_API_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL
 
 // Fetch all products
 export async function getProducts() {
