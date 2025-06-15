@@ -143,7 +143,7 @@ export default function Home() {
                 size="lg"
                 className="text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-black"
               >
-                <Link href="/products">View All Products</Link>
+                <Link href="/products?category=New%20Arrivals">Shop New Arrivals</Link>
               </Button>
             </div>
           </div>
